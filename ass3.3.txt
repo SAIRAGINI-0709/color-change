@@ -1,0 +1,16 @@
+const toggleButton = document.getElementById('toggleButton');
+const container = document.getElementById('container');
+const text = document.getElementById('text');
+
+toggleButton.addEventListener('click', function() {
+    toggleButton.classList.toggle('active');
+    container.classList.toggle('activeContainer');
+    
+    if (toggleButton.classList.contains('active')) {
+        toggleButton.textContent = 'Click Again!';
+        text.textContent = 'The container color and text have changed!';
+    } else {
+        toggleButton.textContent = 'Click Me!';
+        text.textContent = 'This is some text inside the container.';
+    }
+});
